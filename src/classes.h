@@ -20,7 +20,7 @@ namespace {
 }
 
 #include "DataFormats/SiStripDigi/interface/SiStripRawDigi.h"
-#include "DataFormats/Common/interface/traits.h"
+#include "DataFormats/Common/interface/traits.h" // DoNotSortUponInsertion
 namespace {
   namespace {
     edm::Wrapper< SiStripRawDigi > raw0;
@@ -33,16 +33,12 @@ namespace {
 }
 
 #include "DataFormats/SiStripDigi/interface/SiStripDigiCollection.h"
-#include "DataFormats/FEDRawData/interface/FEDRawDataCollection.h"
 #include "DataFormats/SiStripCommon/interface/SiStripEnumeratedTypes.h"
 #include "boost/cstdint.hpp"
 namespace {
   namespace {
 
     edm::Wrapper<SiStripDigiCollection> digis;
-
-    edm::Wrapper<FEDRawDataCollection> fed_buffers;
-    edm::RefProd<FEDRawDataCollection> ref_to_fed_buffers;
 
     edm::Wrapper< std::vector<bool> > list_of_fed_id;
 
